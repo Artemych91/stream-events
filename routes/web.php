@@ -22,8 +22,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
+Route::get('/auth/github', [App\Http\Controllers\AuthController::class, 'redirectToProvider'])->name('auth-github');
+Route::get('/auth/github/callback', [App\Http\Controllers\AuthController::class, 'handleProviderCallback'])->name('handle-provider-callback');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');

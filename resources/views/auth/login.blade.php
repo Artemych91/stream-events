@@ -51,7 +51,7 @@
                             </div>
                         </div>
 
-                        <div class="row mb-0">
+                        <div class="row mb-3">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
@@ -64,6 +64,15 @@
                                 @endif
                             </div>
                         </div>
+
+                        <div class="row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                or <a href="{{ url('/auth/github') }}" class="btn btn-github">
+                                    Login with GitHub
+                                </a>
+                            </div>
+                        </div>
+
                     </form>
                 </div>
             </div>
