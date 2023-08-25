@@ -24,7 +24,7 @@ class AuthController extends Controller
 
         auth()->login($user);
 
-        return redirect('/home');
+        return redirect('/');
     }
 }
 

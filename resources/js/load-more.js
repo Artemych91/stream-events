@@ -11,7 +11,7 @@ function loadMoreEvents() {
 
     loading = true; // Set loading state
 
-    axios.get(`/dashboard?page=${currentPage}`)
+    axios.get(`/?page=${currentPage}`)
         .then(response => {
             const eventsContainer = document.querySelector('#events-container');
             eventsContainer.insertAdjacentHTML('beforeend', response.data); // Append new events
